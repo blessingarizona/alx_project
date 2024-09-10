@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Recommendation System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Music Recommender </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Recommended Songs Based on Your Liked Tracks</h1>
-        <div id="recommendations" class="recommendations"></div>
+        <header>
+            <h1>Discover Your Next Favorite Track</h1>
+            <p class="subtitle">Personalized Music Recommendations</p>
+        </header>
+
+        <main>
+            <button class="primary-btn" onclick="window.location.href='/login'">Login with Spotify</button>
+
+            <div class="recommendations-section">
+                <button class="secondary-btn" id="get-recommendations">Get Recommendations</button>
+                <div id="recommendations-list" class="recommendations-list"></div>
+            </div>
+        </main>
     </div>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
