@@ -7,7 +7,7 @@ class SpotifyClient:
         self.sp_oauth = SpotifyOAuth(
             client_id='2e911d83a37248e68ac6458470a093e6',  # Replace with your Spotify Client ID
             client_secret='2648d06ddc464bdcbff11f1e4269913d',  # Replace with your Spotify Client Secret
-            redirect_uri='http://localhost:3000/callback',
+            redirect_uri='https://music-recommender-rfql.onrender.com/callback',
             scope='user-library-read'
         )
         self.sp = spotipy.Spotify(auth_manager=self.sp_oauth)
